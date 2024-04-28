@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdn.tailwindcss.com"></script>
+    <title>Contact- Rockfluencer</title>
+</head>
+<body class="bg-gray-100">
+    <div class="bg-gray-100">
+
+        <div class="h-screen flex overflow-hidden bg-gray-200">
+            <!-- Sidebar -->
+            <div class="absolute bg-gray-800 text-white w-56 min-h-screen overflow-y-auto transition-transform transform -translate-x-full ease-in-out duration-300"
+                id="sidebar">
+                <!-- Your Sidebar Content -->
+                <div class="p-4">
+                    <h1 class="text-2xl font-semibold">Welcome User!</h1>
+                    <ul class="mt-4">
+                        <li class="mb-2"><a href="index.html" class="block hover:text-indigo-400">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="block hover:text-indigo-400">About</a></li>
+                        <li class="mb-2"><a href="services.html" class="block hover:text-indigo-400">Services</a></li>
+                        <li class="mb-2"><a href="contact.html" class="block hover:text-indigo-400">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Content -->
+            <div class="flex-1 flex flex-col overflow-hidden">
+                <!-- Navbar -->
+                <div class="bg-white shadow">
+                    <div class="container mx-auto">
+                        <div class="flex justify-between items-center py-4 px-2">
+                            <h1 class="text-xl font-semibold font-style: italic text-blue-500">Rockfluencer</h1>
+    
+                            <button class="text-gray-500 hover:text-gray-600" id="open-sidebar">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                        </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Content Body -->
+                <div class="flex-1 overflow-auto p-4">
+                    <div class="flex justify-center ">
+                        <div class="flex md:flex-row flex-col justify-center max-w-7xl m-4 ">
+                            <div class="lg:w-1/2 bg-black ">
+                                <div class="flex justify-center flex-col items-center">
+                                    <div class="text-white m-6 text-xl z-200"> Contact Us </div>
+                                    <div class="text-white m-6 z-200"> We are always here to help out whatever way we can :) </div>
+                                    <div class="text-white m-6 z-200">
+                                        <div class="flex m-2">
+                                            <ion-icon name="person-outline" class="m-2"></ion-icon> <input placeholder="Name"
+                                                class="bg-gray-800 p-2 rounded-3xl">
+                                        </div>
+                                        <div class="flex m-2">
+                                            <ion-icon name="mail-outline" class="m-2"></ion-icon> <input placeholder="E-mail"
+                                                class="bg-gray-800 p-2 rounded-3xl">
+                                        </div>
+                                        <div class="flex m-2">
+                                            <ion-icon name="call-outline" class="m-2"></ion-icon> <input placeholder="Phone"
+                                                class="bg-gray-800 p-2 rounded-3xl">
+                                        </div>
+                                        <div class="flex m-2">
+                                            <ion-icon name="create-outline" class="m-2"></ion-icon> <input
+                                                placeholder="Type your message" class="bg-gray-800 p-2 rounded-3xl">
+                                        </div>
+                                        <div class="block m-2justify-center">
+                                            <div class="bg-blue-700 p-2 rounded-3xl hover:bg-blue-800 cursor-pointer ">
+                                                <div class="flex justify-center"> Send </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-3/4 lg:w-2/3 ">
+                                <div class="w-3/4 lg:w-1/2 overflow-contain h-min"> <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.521811892828!2d77.34815549999996!3d28.584118700000012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5111346a6ad%3A0xa7898595277d4bcd!2sNOIDA%20CITY%20CENTER%20PROPOSAL!5e0!3m2!1sen!2sin!4v1714323593246!5m2!1sen!2sin"
+                                        width="375" height="667" style="border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"></iframe> </div>
+                            </div>
+                        </div>
+                        </div>
+                        <script src="https://cdn.tailwindcss.com"></script>
+                        <script src="https://use.fontawesome.com/03f8a0ebd4.js"></script>
+                        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+                        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 
+
+                </div>
+            </div>
+        </div>
+
+    
+        <script>
+            const sidebar = document.getElementById('sidebar');
+        const openSidebarButton = document.getElementById('open-sidebar');
+        
+        openSidebarButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            sidebar.classList.toggle('-translate-x-full');
+        });
+    
+        // Close the sidebar when clicking outside of it
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !openSidebarButton.contains(e.target)) {
+                sidebar.classList.add('-translate-x-full');
+            }
+        });
+        </script>
+    
+    </div>
+</body>
+</html>
